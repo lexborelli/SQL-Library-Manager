@@ -9,9 +9,19 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-//create a Sequelize instance
+//create a Sequelize instance & testing the connection with async IIFE
 const { sequelize } = require('./models');
 
+(async () => {
+
+  try {
+    await sequelize.authenticate();
+    console.log('Connection to the database successfully.');
+    await sequelize.sync(); 
+  } catch (error) {
+  console.log('Error connecting to the database: ', error);
+  }
+}) ();
 
 
 
