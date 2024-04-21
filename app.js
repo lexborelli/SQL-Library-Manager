@@ -13,7 +13,6 @@ var app = express();
 const { sequelize } = require('./models');
 
 (async () => {
-
   try {
     await sequelize.authenticate();
     console.log('Connection to the database successfully.');
@@ -43,7 +42,7 @@ app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  const err = new Error("err");
+  const err = new Error();
   err.status = 404;
   next(err);
 });
@@ -61,7 +60,7 @@ app.use(function(err, req, res, next) {
   } else {
   // render the error page
     err.message = err.message || `Something went wrong with the server.`;
-    res.status(err.status || 500).render('error', {err});
+    res.status(err.status || 500).render('error', { err });
     console.log(err.status, err.message);
   }
 });
