@@ -70,7 +70,7 @@ router.post('/books/:id', asyncHandler(async (req, res) => {
       book = await Book.build(req.body);
       book.id = req.params.id;// make sure correct book gets updated
       res.render("update-book", {book, errors: error.errors, title: "Update Book"})
-    }else {
+    } else {
       throw error; 
     }
   }
