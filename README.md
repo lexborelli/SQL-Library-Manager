@@ -1,6 +1,6 @@
 # SQL-Library-Manager 
 
-This application was created for a fictional local library tohelp them manage their collection of books. This web application will include pages to list, add, update, and delete books. I used JavaScript, Node.js, Express, Pug, SQLite and the SQL ORM Sequelize to build this application. 
+This application was created for a fictional local library to help them manage their collection of books. This web application will include pages to list, add, update, and delete books. I used JavaScript, Node.js, Express, Pug, SQLite and the SQL ORM Sequelize to build this application. 
 
 Implemented the following: 
 
